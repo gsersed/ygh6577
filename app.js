@@ -1,3 +1,12 @@
+function encode_utf8(s) {
+  return unescape(encodeURIComponent(s));
+}
+
+function decode_utf8(s) {
+  return decodeURIComponent(escape(s));
+}
+//utf-8
+
 const http = require('http');
 
 const port=process.env.PORT || 3000

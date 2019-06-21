@@ -1,12 +1,5 @@
-function encode_utf8(s) {
-  return unescape(encodeURIComponent(s));
-}
-
-function decode_utf8(s) {
-  return decodeURIComponent(escape(s));
-}
-//utf-8
-
+<meta charset="utf-8">
+  <script>
 const http = require('http');
 
 const port=process.env.PORT || 3000
@@ -20,3 +13,4 @@ const server = http.createServer((req, res) => {
 server.listen(port,() => {
   console.log(`Server running at port `+port);
 });
+</script>

@@ -1,21 +1,11 @@
-function encode_utf8(res) {
-  return unescape(encodeURIComponent(res));
-}
+app.get('/', function(req, res){
 
-function decode_utf8(res) {
-  return decodeURIComponent(escape(res));
-}
+  //req.session.message = 'Hello World';
 
-const http = require('http');
+  res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
 
-const port=process.env.PORT || 3000
+  res.write("welcome입니다");
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>한글 연동확인확인 테스트테스트</h1>');
-});
+  res.end();
 
-server.listen(port,() => {
-  console.log(`Server running at port `+port);
 });

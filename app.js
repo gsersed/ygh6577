@@ -1,11 +1,3 @@
-function encode_utf8(res) {
-  return unescape(encodeURIComponent(res));
-}
-
-function decode_utf8(s) {
-  return decodeURIComponent(escape(s));
-}     // ↑ 추가해봐도 잘안됬습니다!!
-
 const http = require('http');
 
 const port=process.env.PORT || 3000

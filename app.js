@@ -1,9 +1,9 @@
-function encode_utf8(end) {
-  return unescape(encodeURIComponent(end));
+function encode_utf8(res) {
+  return unescape(encodeURIComponent(res));
 }
 
-function decode_utf8(end) {
-  return decodeURIComponent(escape(end));
+function decode_utf8(res) {
+  return decodeURIComponent(escape(res));
 }
 
 const http = require('http');

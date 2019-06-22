@@ -1,4 +1,4 @@
-function decode_utf8(s) {
+function decode_utf8(end) {
   return decodeURIComponent(escape(end));
 }     // ↑ 추가해봐도 잘안됬습니다!!
 
